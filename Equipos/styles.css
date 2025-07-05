@@ -1,0 +1,1345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    background: #131313;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.navbar{
+    width:90px;
+    height:auto;
+    background: rgba(102, 98, 98, 0);
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    background: linear-gradient(90deg, rgba(43,43,43,1) 0%, rgba(19,19,19,1) 100%);
+}
+
+.navbar > ul{
+    height:100vh;
+    list-style-type: none;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.navbar > ul > li{
+    margin: 5px 0 5px 0;
+}
+
+.navbar > ul > li > a > img{
+    width:50px;
+    transition: all 300ms;
+}
+
+.navbar > ul > li > a > img:hover{
+    transform: scale(1.5);
+}
+
+
+.navbar2{
+    width:90px;
+    height:auto;
+    background: rgba(80, 17, 86, 0);
+    position:fixed;
+    top:0;
+    right:0;
+    height:100vh;
+    background: linear-gradient(90deg,rgba(19,19,19,1) 0%, rgba(43,43,43,1) 100%);
+}
+
+.navbar2 > ul{
+    height:100vh;
+    list-style-type: none;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.navbar2 > ul > li{
+    margin: 5px 0 5px 0;
+}
+
+.navbar2 > ul > li > a > img{
+    width:50px;
+    transition: all 300ms;
+}
+
+.navbar2 > ul > li > a > img:hover{
+    transform: scale(1.5);
+}
+
+#g_container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.container {
+    width:80%;
+    border-radius: 1.25rem;
+    border: .625rem solid rgb(0, 0, 0);
+    display: flex;
+    margin: 2rem 0 2rem 0;
+    background: linear-gradient(326deg, rgba(0, 0, 0, 0.6) 40%, rgba(255, 255, 255, 0.6) 100%);
+    padding: 1.25rem 1.25rem 0 1.25rem;
+    color:white;
+}
+
+.izq {
+    width: 20%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.escudo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid rgba(78, 57, 86, 0.6);
+    border-radius: 5px;
+    border-right:0;    
+}
+
+.escondido {
+    display: none;
+}
+
+.escudo>img {
+    width: 6.5625rem;
+    padding: .3125rem;
+}
+
+.seleccionador {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    border-radius: 6px;
+    color: white;
+    margin:10px 0 10px 0;
+    }
+
+.seleccionador > .jugador{
+    box-shadow: inset 0px 0px 20px -5px rgba(222, 136, 47, 0.5);
+    padding:10px;
+    border: 3px solid rgba(78, 57, 86, 0.6);
+    border-radius:4px;
+}
+
+
+.capi {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: .625rem 0 1.875rem 0;
+}
+
+.capi>img {
+    width: 6rem;
+    border: 5px solid rgba(78, 57, 86, 0.6);
+    border-radius:10px;
+}
+
+.entrenador {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+}
+
+.entrenador>img {
+    width: 7.5rem;
+    border: 5px solid rgba(78, 57, 86, 0.6);
+    border-radius: 10px;
+}
+
+.der {
+    width: 80%;
+}
+
+.info {
+    width: 100%;
+    height: auto;
+    padding-top: 1.9375rem;
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+}
+
+.nombre {
+    width: 100%;
+    height: 6.9375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    background: linear-gradient(90deg,rgba(0,0,0,0) 10%, rgba(167, 70, 188, 0.5) 50%, rgba(0, 0, 0, 0.9) 90%);
+    border-top-left-radius: 22.5rem;
+    border-bottom-right-radius: 22.5rem;
+    border-top-right-radius: 1.875rem;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+}
+
+.equipo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.minicarta {
+    cursor: pointer;
+    transition: all 300ms;
+    margin: .625rem;
+}
+
+.minicarta>img {
+    width: 62px;
+}
+
+.minicarta:hover {
+    transform: scale(1.2);
+}
+
+.minicarta > img{
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.minicartas {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap:wrap;
+}
+
+.tit {
+    padding: .625rem;
+}
+
+.tit>h1 {
+    width: 100px;
+    height: 40px;
+    border-radius: 6px;
+    border: 3px solid black;
+    color: white;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: inset 0px 0px 20px -5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.delanteros {
+    background: rgba(206, 28, 28, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0 5px 0;
+    border: 5px solid rgba(78, 57, 86, 0.6);
+    border-radius: 15px;
+}
+
+.dl {
+    background: rgb(185, 39, 39);
+}
+
+.centros {
+    background: rgba(41, 41, 176, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0 5px 0;
+    border: 5px solid rgba(78, 57, 86, 0.6);
+    border-radius: 15px;
+}
+
+.md {
+    background: rgb(24, 69, 174);
+}
+
+
+.defensas {
+    background: rgba(23, 164, 23, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0 5px 0;
+    border: 5px solid rgba(78, 57, 86, 0.6);
+    border-radius: 15px;
+}
+
+.df {
+    background: rgb(31, 147, 31);
+}
+
+.porteros {
+    background: rgba(212, 212, 40, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0 5px 0;
+    border: 5px solid rgba(78, 57, 86, 0.6);
+    border-radius: 15px;
+}
+
+.pr {
+    background: rgb(152, 152, 41);
+}
+
+.cesiones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cesiones > .minicartas{
+    justify-content: center;
+    background: rgba(104, 11, 192, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    border-radius: 15px;
+    border: 5px solid white;
+}
+
+#ces{
+    border:none;
+    box-shadow:none;
+}
+
+
+/* INPUT PARA BUSCAR POR NOMBRE  */
+
+.name{
+    color:white;
+    background-color: rgb(50, 50, 51);
+    border-radius: 10px;
+    margin:10px;
+    padding:7px;
+    position:fixed;
+    top:0;
+    right:90px;
+    border: 3px solid white;
+}
+
+.name:hover input{
+    display:inline;
+}
+
+.name > ul{
+    list-style-type: none;
+}
+
+.name > ul > li > form > i{
+    margin: 0 2px ;
+}
+
+.name > ul > li > form > input{
+    border-radius:3px;
+    display:none;
+}
+
+/* FIN DEL INPUT */
+
+
+.hidden{
+    display:none;
+}
+
+/* EQUIPO ZERO */
+
+
+#zer > .der > .info > .cesiones > .minicartas{
+    border: 5px solid rgba(222, 136, 47, 0.5);
+}
+
+#zer > .der > .info > .cesiones > .tit > h1{
+    display:block;
+    height:30px;
+}
+
+#zer > .der > .info > .cesiones > .tit{
+    padding:0;
+}
+
+#zer > .izq > .zer_capi{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#zer > .izq > .zer_capi > .capi{
+    width:50%;
+}
+
+#zer > .der > .nombre {
+    letter-spacing: 10px;
+    text-shadow: 0px 0px 3px rgb(255, 255, 255);
+}
+
+
+
+
+/* EQUIPO BIG BANG */
+
+
+#big{
+    border-color:rgb(228, 231, 60);
+    background: linear-gradient(338deg, rgba(242, 255, 104, 0.6) 39%, rgba(58, 150, 255, 0.6) 87%);
+
+}
+
+#big > .izq > .escudo{
+    border-color:rgba(255, 255, 255, 0.6);
+}
+
+#big > .izq > .seleccionador > .jugador{
+    border-color:rgba(255, 255, 255, 0.6);
+}
+
+#big > .izq > .capi > img{
+    border-color:rgba(255, 255, 255, 0.6);
+    background: rgba(197, 206, 28, 0);
+}
+
+#big > .izq > .entrenador > img{
+    border-color:rgba(255, 255, 255, 0.6);
+}
+
+#big > .der > .nombre{
+    background: linear-gradient(90deg, rgba(162, 29, 101, 0) 10%, rgba(170, 176, 68, 0.8) 50%);
+}
+
+#big > .der > .info > .equipo > *{
+    border-color:rgba(255, 255, 255, 0.6);
+}
+
+#big > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(255, 255, 255, 0.6);
+}
+
+#big > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(255, 255, 255, 0.6);
+}
+
+#big > .der > .info > .cesiones > .tit > h1{
+    display:block;
+    height:30px;
+}
+
+#big > .der > .info > .cesiones > .tit{
+    padding:0;
+}
+
+
+/* EQUIPO GAR */
+
+#gar{
+    border-color:rgb(3, 174, 9);
+    background: linear-gradient(338deg, rgba(3, 107, 64, 0.6) 39%, rgba(66, 236, 100, 0.6) 87%);
+
+}
+
+#gar > .izq > .escudo{
+    border-color:rgba(224, 151, 6, 0.6);
+}
+
+#gar > .izq > .seleccionador > .jugador{
+    border-color:rgba(224, 151, 6, 0.6);
+}
+
+#gar > .izq > .capi > img{
+    border-color:rgba(224, 151, 6, 0.6);
+    background: rgba(7, 80, 30, 0);
+}
+
+#gar > .izq > .entrenador > img{
+    border-color:rgba(224, 151, 6, 0.6);
+}
+
+#gar > .der > .nombre{
+    background: linear-gradient(90deg, rgba(162, 29, 101, 0) 10%, rgba(0, 73, 12, 0.8) 50%);
+}
+
+#gar > .der > .info > .equipo > *{
+    border-color:rgba(224, 151, 6, 0.6);
+}
+
+#gar > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(224, 151, 6, 0.6);
+}
+
+#gar > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(224, 151, 6, 0.6);
+}
+
+#gar > .der > .info > .cesiones > .tit > h1{
+    display:block;
+    height:30px;
+}
+
+#gar > .der > .info > .cesiones > .tit{
+    padding:0;
+}
+
+
+/* EQUIPO OCCULT */
+
+
+#occ{
+    border-color:rgb(19, 20, 71);
+    background: linear-gradient(338deg, rgba(4, 34, 95, 0.6) 39%, rgba(83, 121, 215, 0.6)87%);
+
+}
+
+#occ > .izq > .escudo{
+    border-color:rgba(215, 64, 145, 0.6);
+}
+
+#occ > .izq > .seleccionador > .jugador{
+    border-color:rgba(215, 64, 145, 0.6);
+}
+
+#occ > .izq > .capi > img{
+    border-color:rgba(215, 64, 145, 0.6);
+    background: rgba(200, 52, 87, 0);
+}
+
+#occ > .izq > .entrenador > img{
+    border-color:rgba(215, 64, 145, 0.6);
+}
+
+#occ > .der > .nombre{
+    background: linear-gradient(90deg, rgba(162, 29, 101, 0) 10%, rgba(222, 33, 33, 0.8) 50%);
+}
+
+#occ > .der > .info > .equipo > *{
+    border-color:rgba(215, 64, 145, 0.6);
+}
+
+#occ > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(215, 64, 145, 0.6);
+}
+
+#occ > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(215, 64, 145, 0.6);
+}
+
+#occ > .der > .info > .cesiones > .tit > h1{
+    display:block;
+    height:30px;
+}
+
+#occ > .der > .info > .cesiones > .tit{
+    padding:0;
+}
+
+/* EQUIPO MONTE */
+
+
+#mon{
+    border-color:rgb(233, 221, 92);
+    background: linear-gradient(338deg, rgba(46, 75, 133, 0.6) 39%, rgba(215, 83, 83, 0.6)87%);
+
+}
+
+#mon > .izq > .escudo{
+    border-color:rgba(215, 212, 64, 0.6);
+}
+
+#mon > .izq > .seleccionador > .jugador{
+    border-color:rgba(215, 212, 64, 0.6);
+}
+
+#mon > .izq > .capi > img{
+    border-color:rgba(215, 212, 64, 0.6);
+    background: rgba(54, 52, 200, 0);
+}
+
+#mon > .izq > .entrenador > img{
+    border-color:rgba(215, 212, 64, 0.6);
+}
+
+#mon > .der > .nombre{
+    background: linear-gradient(90deg, rgba(162, 29, 101, 0) 10%, rgba(222, 194, 33, 0.8) 50%);
+}
+
+#mon > .der > .info > .equipo > *{
+    border-color:rgba(215, 212, 64, 0.6);
+}
+
+#mon > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(215, 212, 64, 0.6);
+}
+
+#mon > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(215, 212, 64, 0.6);
+}
+
+#mon > .der > .info > .cesiones > .tit > h1{
+    display:block;
+    height:30px;
+}
+
+#mon > .der > .info > .cesiones > .tit{
+    padding:0;
+}
+
+
+/* EQUIPO MONTE */
+
+
+#mon{
+    border-color:rgb(233, 221, 92);
+    background: linear-gradient(338deg, rgba(46, 75, 133, 0.6) 39%, rgba(215, 83, 83, 0.6)87%);
+
+}
+
+#mon > .izq > .escudo{
+    border-color:rgba(215, 212, 64, 0.6);
+}
+
+#mon > .izq > .seleccionador > .jugador{
+    border-color:rgba(215, 212, 64, 0.6);
+}
+
+#mon > .izq > .capi > img{
+    border-color:rgba(215, 212, 64, 0.6);
+    background: rgba(54, 52, 200, 0);
+}
+
+#mon > .izq > .entrenador > img{
+    border-color:rgba(215, 212, 64, 0.6);
+}
+
+#mon > .der > .nombre{
+    background: linear-gradient(90deg, rgba(162, 29, 101, 0) 10%, rgba(222, 194, 33, 0.8) 50%);
+}
+
+#mon > .der > .info > .equipo > *{
+    border-color:rgba(215, 212, 64, 0.6);
+}
+
+#mon > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(215, 212, 64, 0.6);
+}
+
+
+
+/* EQUIPO ROYAL ACADEMY */
+
+
+#roy{
+    border-color:rgb(2, 103, 72);
+    background: linear-gradient(338deg, rgba(255, 0, 0, 0.6) 10%, rgba(2, 103, 72, 0.6) 90%);
+
+}
+
+#roy > .izq > .escudo{
+    border-color:rgba(220, 219, 147, 0.6);
+}
+
+#roy > .izq > .seleccionador > .jugador{
+    border-color:rgba(220, 219, 147, 0.6);
+}
+
+#roy > .izq > .capi > img{
+    border-color:rgba(220, 219, 147, 0.6);
+    background: rgba(212, 129, 129, 0);
+}
+
+#roy > .izq > .entrenador > img{
+    border-color:rgba(220, 219, 147, 0.6);
+}
+
+#roy > .der > .nombre{
+    background: linear-gradient(90deg, rgba(162, 29, 101, 0) 10%, rgba(162, 81, 27, 0.8) 50%);
+}
+
+#roy > .der > .info > .equipo > *{
+    border-color:rgba(220, 219, 147, 0.6);
+}
+
+#roy > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(220, 219, 147, 0.6);
+}
+
+#roy > .der > .info > .cesiones > .minicartas{
+    border: 5px solid rgba(220, 219, 147, 0.6);
+}
+
+#roy > .der > .info > .cesiones > .tit > h1{
+    display:block;
+    height:30px;
+}
+
+#roy > .der > .info > .cesiones > .tit{
+    padding:0;
+}
+
+
+
+/* EQUIPO KIRKWOOD */
+
+
+#pod{
+    border-color:rgb(255, 234, 0);
+    background: linear-gradient(338deg, rgba(131, 42, 42, 0.6) 10%, rgba(16, 19, 148, 0.6) 90%);
+
+}
+
+#pod > .izq > .escudo{
+    border-color:rgba(220, 219, 147, 0.6);
+}
+
+#pod > .izq > .seleccionador > .jugador{
+    border-color:rgba(220, 219, 147, 0.6);
+}
+
+#pod > .izq > .capi > img{
+    border-color:rgba(220, 219, 147, 0.6);
+    background: rgba(212, 129, 129, 0);
+}
+
+#pod > .izq > .entrenador > img{
+    border-color:rgba(220, 219, 147, 0.6);
+}
+
+#pod > .der > .nombre{
+    background: linear-gradient(90deg, rgba(162, 29, 101, 0) 10%, rgba(222, 194, 33, 0.8) 50%);
+}
+
+#pod > .der > .info > .equipo > *{
+    border-color:rgba(220, 219, 147, 0.5);
+}
+
+#kir > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(247, 255, 92, 0.6);
+}
+
+#kir > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(247, 255, 92, 0.6);
+}
+
+#kir > .der > .info > .cesiones > .tit > h1{
+    display:block;
+    height:30px;
+}
+
+#kir > .der > .info > .cesiones > .tit{
+    padding:0;
+}
+
+
+
+/* EQUIPO SUPERNOVA */
+
+
+#sup{
+    border-color:rgb(41, 2, 119);
+    background: linear-gradient(338deg, rgba(158, 158, 158, 0.6) 10%, rgba(70, 3, 194, 0.6) 90%);
+}
+
+#sup > .izq > .escudo{
+    border-color:rgba(255, 255, 255, 0.6);
+}
+
+#sup > .izq > .seleccionador > .jugador{
+    border-color:rgba(255, 255, 255, 0.6);
+}
+
+#sup > .izq > .capi > img{
+    border-color:rgba(255, 255, 255, 0.6);
+    background: rgba(212, 129, 129, 0);
+}
+
+#sup > .izq > .entrenador > img{
+    border-color:rgba(255, 255, 255, 0.6);
+}
+
+#sup > .der > .nombre{
+    background: linear-gradient(90deg, rgba(162, 29, 101, 0) 10%, rgba(188, 48, 48, 0.8) 50%);
+}
+
+#sup > .der > .info > .equipo > *{
+    border-color:rgba(255, 255, 255, 0.5);
+}
+
+#sup > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(220, 219, 147, 0.5);
+}
+
+#sup > .der > .info > .cesiones > .tit > h1{
+    display:block;
+    height:30px;
+}
+
+#sup > .der > .info > .cesiones > .tit{
+    padding:0;
+}
+
+
+
+
+/* EQUIPO ULTRAMEGAHIEDRA */
+
+
+#ult{
+    border-color:rgb(34, 65, 220);
+    background: linear-gradient(338deg, rgba(62, 193, 213, 0.6) 5%, rgba(70, 3, 194, 0.6) 95%);
+}
+
+#ult > .izq > .escudo{
+    border-color:rgba(255, 255, 255, 0.6);
+}
+
+#ult > .izq > .seleccionador > .jugador{
+    border-color:rgba(255, 255, 255, 0.6);
+}
+
+#ult > .izq > .capi > img{
+    border-color:rgba(255, 255, 255, 0.6);
+    background: rgba(212, 129, 129, 0);
+}
+
+#ult > .izq > .entrenador > img{
+    border-color:rgba(255, 255, 255, 0.6);
+}
+
+#ult > .der > .nombre{
+    background: linear-gradient(90deg, rgba(162, 29, 101, 0) 10%, rgba(142, 142, 142, 0.8) 50%);
+}
+
+#ult > .der > .info > .equipo > *{
+    border-color:rgba(255, 255, 255, 0.5);
+}
+
+#ult > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(220, 219, 147, 0.5);
+}
+
+#ult > .der > .info > .cesiones > .tit > h1{
+    display:block;
+    height:30px;
+}
+
+#ult > .der > .info > .cesiones > .tit{
+    padding:0;
+}
+
+
+
+/* EQUIPO RESISTENCIA */
+
+
+#res{
+    border-color:rgb(255, 255, 255);
+    background: linear-gradient(338deg, rgba(224, 120, 72, 0.6) 5%, rgba(162, 80, 80, 0.6) 95%);
+}
+
+#res > .izq > .escudo{
+    border-color:rgba(16, 16, 16, 0.6);
+}
+
+#res > .izq > .seleccionador > .jugador{
+    border-color:rgba(16, 16, 16, 0.6);
+}
+
+#res > .izq > .capi > img{
+    border-color:rgba(16, 16, 16, 0.6);
+    background: rgba(212, 129, 129, 0);
+}
+
+#res > .izq > .entrenador > img{
+    border-color:rgba(16, 16, 16, 0.6);
+}
+
+#res > .der > .nombre{
+    background: linear-gradient(90deg, rgba(162, 29, 101, 0) 10%, rgba(58, 58, 57, 0.8) 50%);
+}
+
+#res > .der > .info > .equipo > *{
+    border-color:rgba(16, 16, 16, 0.6);
+}
+
+#res > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(16, 16, 16, 0.6);
+}
+
+#res > .der > .info > .cesiones > .tit > h1{
+    display:block;
+    height:30px;
+}
+
+#res > .der > .info > .cesiones > .tit{
+    padding:0;
+}
+
+
+
+/* EQUIPO LUZ ETERNA */
+
+
+#luz{
+    border-color:rgb(43, 104, 154);
+    background: linear-gradient(338deg, rgba(255, 255, 255, 0.6) 5%, rgba(255, 241, 47, 0.6) 95%);
+}
+
+#luz > .izq > .escudo{
+    border-color:rgba(194, 194, 194, 0.6);
+}
+
+#luz > .izq > .seleccionador > .jugador{
+    border-color:rgba(194, 194, 194, 0.6);
+}
+
+#luz > .izq > .capi > img{
+    border-color:rgba(194, 194, 194, 0.6);
+    background: rgba(212, 129, 129, 0);
+}
+
+#luz > .izq > .entrenador > img{
+    border-color:rgba(194, 194, 194, 0.6);
+}
+
+#luz > .der > .nombre{
+    background: linear-gradient(90deg, rgba(162, 29, 101, 0) 10%, rgba(83, 131, 213, 0.8) 50%);
+}
+
+#luz > .der > .info > .equipo > *{
+    border-color:rgba(194, 194, 194, 0.6);
+}
+
+#luz > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(194, 194, 194, 0.6);
+}
+
+#luz > .der > .info > .cesiones > .tit > h1{
+    display:block;
+    height:30px;
+}
+
+#luz > .der > .info > .cesiones > .tit{
+    padding:0;
+}
+
+
+/* EQUIPO ALPINO */
+
+
+#alp{
+    border-color:rgb(156, 222, 239);
+    background: linear-gradient(338deg, rgba(91, 233, 241, 0.6) 5%, rgba(209, 237, 241, 0.6) 95%);
+}
+
+#alp > .izq > .escudo{
+    border-color:rgba(255, 157, 0, 0.6);
+}
+
+#alp > .izq > .seleccionador > .jugador{
+    border-color:rgba(255, 157, 0, 0.6);
+}
+
+#alp > .izq > .capi > img{
+    border-color:rgba(255, 157, 0, 0.6);
+    background: rgba(212, 129, 129, 0);
+}
+
+#alp > .izq > .entrenador > img{
+    border-color:rgba(255, 157, 0, 0.6);
+}
+
+#alp > .der > .nombre{
+    background: linear-gradient(90deg, rgba(162, 29, 101, 0) 10%, rgba(212, 134, 18, 0.8) 50%);
+}
+
+#alp > .der > .info > .equipo > *{
+    border-color:rgba(255, 157, 0, 0.6);
+}
+
+
+
+
+
+/* EQUIPO RAGNAH */
+
+
+#rag{
+    border-color:rgb(62, 216, 255);
+    background: linear-gradient(338deg, rgba(255, 236, 69, 0.6) 5%, rgba(202, 202, 202, 0.9) 95%);
+}
+
+#rag > .izq > .escudo{
+    border-color:rgba(255, 140, 0, 0.6);
+}
+
+#rag > .izq > .escudo > img{
+    width:75px;
+}
+
+#rag > .izq > .seleccionador > .jugador{
+    border-color:rgba(255, 140, 0, 0.6);
+}
+
+#rag > .izq > .capi > img{
+    border-color:rgba(255, 140, 0, 0.6);
+    background: rgba(212, 129, 129, 0);
+}
+
+#rag > .izq > .entrenador > img{
+    border-color:rgba(255, 140, 0, 0.6);
+}
+
+#rag > .der > .nombre{
+    background: linear-gradient(90deg, rgba(162, 29, 101, 0) 10%, rgba(15, 77, 210, 0.8) 50%);
+}
+
+#rag > .der > .info > .equipo > *{
+    border-color:rgba(255, 140, 0, 0.6);
+}
+
+#rag > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(255, 140, 0, 0.6);
+}
+
+#rag > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(255, 140, 0, 0.6);
+}
+
+#rag > .der > .info > .cesiones > .tit > h1{
+    display:block;
+    height:30px;
+}
+
+#rag > .der > .info > .cesiones > .tit{
+    padding:0;
+}
+
+
+
+
+/* EQUIPO ZEUS */
+
+
+#zeu{
+    border-color:rgb(58, 118, 50);
+    background: linear-gradient(338deg,  rgba(202, 202, 202, 0.9) 5%, rgba(255, 236, 69, 0.6) 95%);
+}
+
+#zeu > .izq > .escudo{
+    border-color:rgba(160, 255, 92, 0.6);
+}
+
+#zeu > .izq > .seleccionador > .jugador{
+    border-color:rgba(160, 255, 92, 0.6);
+}
+
+#zeu > .izq > .capi > img{
+    border-color:rgba(160, 255, 92, 0.6);
+    background: rgba(212, 129, 129, 0);
+}
+
+#zeu > .izq > .entrenador > img{
+    border-color:rgba(160, 255, 92, 0.6);
+}
+
+#zeu > .der > .nombre{
+    background: linear-gradient(90deg, rgba(162, 29, 101, 0) 10%, rgba(190, 190, 190, 0.8) 50%);
+}
+
+#zeu > .der > .info > .equipo > *{
+    border-color:rgba(160, 255, 92, 0.6);
+}
+
+
+
+/* EQUIPO KIRKWOOD */
+
+
+#kir{
+    border-color:rgb(198, 59, 59);
+    background: linear-gradient(338deg,  rgba(172, 172, 172, 0.6) 5%, rgba(255, 141, 141, 0.6) 95%);
+}
+
+#kir > .izq > .escudo{
+    border-color:rgba(247, 255, 92, 0.6);
+}
+
+
+#kir > .izq > .seleccionador > .jugador{
+    border-color:rgba(247, 255, 92, 0.6);
+}
+
+#kir > .izq > .capi > img{
+    border-color:rgba(247, 255, 92, 0.6);
+    background: rgba(212, 129, 129, 0);
+}
+
+#kir > .izq > .entrenador > img{
+    border-color:rgba(247, 255, 92, 0.6);
+}
+
+#kir > .der > .nombre{
+    background: linear-gradient(90deg, rgba(162, 29, 101, 0) 10%, rgba(248, 75, 75, 0.8) 50%);
+}
+
+#kir > .der > .info > .equipo > *{
+    border-color:rgba(247, 255, 92, 0.6);
+}
+
+
+
+/* EQUIPO POLARIS */
+
+
+#pol{
+    border-color:rgb(85, 102, 130);
+    background: linear-gradient(338deg,  rgba(88, 16, 121, 0.6) 5%, rgba(199, 126, 238, 0.6) 95%);
+}
+
+#pol > .izq > .escudo{
+    border-color:rgba(219, 113, 255, 0.6);
+}
+
+
+#pol > .izq > .seleccionador > .jugador{
+    border-color:rgba(219, 113, 255, 0.6);
+}
+
+#pol > .izq > .capi > img{
+    border-color:rgba(219, 113, 255, 0.6);
+    background: rgba(212, 129, 129, 0);
+}
+
+#pol > .izq > .entrenador > img{
+    border-color:rgba(219, 113, 255, 0.6);
+}
+
+#pol > .der > .nombre{
+    background: linear-gradient(90deg, rgba(162, 29, 101, 0) 10%, rgba(190, 110, 234, 0.8) 50%);
+}
+
+#pol > .der > .info > .equipo > *{
+    border-color:rgba(219, 113, 255, 0.6);
+}
+
+
+
+/* EQUIPO OSCURIDAD */
+
+
+#osc{
+    border-color:rgb(175, 0, 55);
+    background: linear-gradient(338deg,  rgba(181, 33, 33, 0.6) 5%, rgba(0, 0, 0, 0.6) 95%);
+}
+
+#osc > .izq > .escudo{
+    border-color:rgba(255, 80, 80, 0.6);
+}
+
+
+#osc > .izq > .seleccionador > .jugador{
+    border-color:rgba(255, 80, 80, 0.6);
+}
+
+#osc > .izq > .capi > img{
+    border-color:rgba(255, 80, 80, 0.6);
+    background: rgba(212, 129, 129, 0);
+}
+
+#osc > .izq > .entrenador > img{
+    border-color:rgba(255, 80, 80, 0.6);
+}
+
+#osc > .der > .nombre{
+    background: linear-gradient(90deg, rgba(162, 29, 101, 0) 10%, rgba(121, 10, 47, 0.8) 50%);
+}
+
+#osc > .der > .info > .equipo > *{
+    border-color:rgba(255, 80, 80, 0.6);
+}
+
+#osc > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(255, 80, 80, 0.6);
+}
+
+#osc > .der > .info > .cesiones > .minicartas{
+    border-color:rgba(255, 80, 80, 0.6);
+}
+
+#osc > .der > .info > .cesiones > .tit > h1{
+    display:block;
+    height:30px;
+}
+
+#osc > .der > .info > .cesiones > .tit{
+    padding:0;
+}
+
+
+
+
+
+
+/* ......../ media query /.......... */
+
+@media (max-width: 835px) {
+
+    .navbar{
+        display:none;
+    }
+
+    .navbar2{
+        display:none;
+    }
+
+    .navbar > ul > li > a > img{
+        width:51px;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .izq {
+        width: 100%;
+    }
+
+    .escudo {
+        padding: 30px;
+        border: 5px solid rgba(222, 136, 47, 0.5);
+    }
+
+    .escondido {
+        width: 100%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        padding: 10px 0 20px 0;
+        text-align: center;
+    }
+
+    .seleccionador {
+        padding: 10px 0 30px 0;
+    }
+
+    .der {
+        width: 100%;
+    }
+
+    .nombre {
+        display: none;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: auto;
+    }
+
+    .name{
+        display:none;
+    }
+
+    .equipo>h1 {
+        margin: 10px 0 10px 0;
+    }
+
+    .delanteros {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .centros {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .defensas {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .porteros {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .minicartas {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .suplentes > h1{
+        margin: 5px 0 5px 0;
+    }
+
+    .suplentes > .minicartas{
+        margin:10px 0 0 0;
+    }
+
+    .cesiones > .minicartas{
+        margin:10px 0 0 0;
+        flex-direction: row;
+    }
+
+    .cesiones > h1{
+        margin: 10px 0 5px 0;
+    }
+
+    #ultra{
+        font-size:20px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .navbar .menu-items li {
+        margin-bottom: 2.5rem;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+}

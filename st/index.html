@@ -1,0 +1,3597 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://kit.fontawesome.com/966e2d420c.js" crossorigin="anonymous"></script>
+    <link type="image/png" sizes="16x16" rel="icon" href="https://img.icons8.com/color/48/black-hole.png">
+    <title>ST</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar-container container">
+                <input type="checkbox" name="" id="">
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <ul class="menu-items">
+                    <li>
+                        <button class="filtro-btn todos" data-posicion="todos">Todos</button>
+                    </li>
+                    <li>
+                        <button class="filtro-btn dl" data-posicion="tiro">TR</button>
+                    </li>
+                    <li>
+                        <button class="filtro-btn md" data-posicion="regate">RG</button>
+                    </li>
+                    <li>
+                        <button class="filtro-btn df" data-posicion="defensa">DF</button>
+                    </li>
+                    <li>
+                        <button class="filtro-btn pr" data-posicion="parada">PD</button>
+                    </li>
+                    <li class="buscador">
+                        <form>
+                            <i class="fas fa-search"></i>
+                            <input type="text" name="" id="search-item" placeholder="Search" onkeyup="search()">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="header"></div>
+        <div class="invisible"></div>
+        <div id="sts">
+            <div class="centrar fuego">
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tornado de fuego DT</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Fire_Tornado_TC', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/a/ab/Fire_Tornado_TC_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Big Bang</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Big_Bang', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/0a/Big_Bang_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tiro de corazon real</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Royal_Heart_Shot', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/e5/Royal_Heart_Shot.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Katana crisantemo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Kiku_Ichimonji', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/bd/Kiku_Ichimonji_10.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Relampago volcanico</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Kazanrai', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/4e/Kazanrai_2.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Aullido de licantropo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Beast_Lord', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b1/Beast_Lord_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tornado de fuego DD</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Fire_Tornado_DD', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/f/fc/Fire_Tornado_DD_10.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Llamarada atomica</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Atomic_Flare', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/45/Atomic_Flare_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tiro amasado</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Yakimochi_Screw', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/ed/Yakimochi_Screw_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tormenta solar</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Sunshine_Storm', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/e1/Sunshine_Storm_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Inyeccion</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Injection', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/93/Injection_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Futuro negativo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Dead_Future', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/f/f2/Dead_Future_G2_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Torbellino de fuego</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Bakunetsu_Screw', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/a/a3/Shin_Bakunetsu_Screw_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Cañon de meteoritos</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Ryuusei_Blade', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/8c/Ryuusei_Blade_V3_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Roca volcanica</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Kazangan', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/7a/Kazangan_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tiro sobrenatural</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Devil_Burst', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/4b/Devil_Burst_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Triangulo ZZ</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Triangle_ZZ', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/eb/Triangle_ZZ_10.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Aguijon letal</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Death_Drop', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/85/Death_Drop_G3_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Bateo total</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Dokonjou_Bat', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/16/Dokonjou_Bat_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tiro de arcabuz</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Hinawa_Bullet', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/f/fd/Hinawa_Bullet_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Balon de petroleo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Oil_Rush', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/70/Oil_Rush_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Cabezazo cohete</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Rocket_Head', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/e4/Rocket_Head_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tornado de fuego</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Fire_Tornado', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b3/Fire_Tornado.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Flecha de cupido</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Love_Arrow', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/4c/Love_Arrow_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Bomba saltarina</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Bound_Flame', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/e3/Bound_Flame_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Fuego rapido</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Rapid_Fire', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/ea/Rapid_Fire_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tiro pirueta</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Abisegeri', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/98/Abisegeri_OG.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Proyectil letal</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Death_Sword', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/ba/Death_Sword_10.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Cabezazo bazuca</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Head_Bazooka', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/e4/Head_Bazooka_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Difusion musical</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Diffuse_Chord', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/2/28/Diffuse_Chord.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Acelerrelampago</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Lightning_Accel', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/77/Lightning_Accel_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Esferas luminosas</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Round_Spark', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/7e/Round_Spark_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Cruce explosivo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Britannia_Cross', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/e3/Britannia_Cross_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Lecho de lava</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Magma_Carpet', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/74/Magma_Carpet_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Avance chispeante</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Spark_Edge_Dribble', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/ca/Spark_Edge_Dribble_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Remolino igneo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Endless_Summer', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/d/dc/Endless_Summer_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Ruta de seda</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Silk_Road', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/1d/Silk_Road_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Salto explosivo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Bungee_Thrust', '_blank');">
+                            <img src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b1/Bungee_Thrust_4.png">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Ataque de garza</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Tsubame_Gaeshi', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/6/60/Tsubame_Gaeshi_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Pompa de chicle</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Fuusen_Gum', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/1f/Fuusen_Gum_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Piroquinesis</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Burning_Summer', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/53/Burning_Summer_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Ritmo agresivo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Aggressive_Beat', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/c9/Aggressive_Beat_Kai_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Fusible</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Doukasen', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/1d/Doukasen_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Rodillazos atomicos</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Mad_Juggler', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/95/Mad_Juggler.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Pared solitaria</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Hitori_One-Two', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b7/Hitori_One-Two_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Elevación fatal</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Fatal_Lift', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/94/Fatal_Lift.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Rayo del juicio</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Judgement_Ray', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/3a/Judgement_Ray_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Vuelo volcanico</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Volcanic_Fly', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/17/Volcanic_Fly_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>La flamme</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/La_Flamme', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/9c/La_Flamme_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Luz cegadora</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Crazy_Sunlight', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/8a/Crazy_Sunlight_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Defensa radial</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Rolling_Cutter', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/2/25/Rolling_Cutter_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Grumo pegapasta</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Mochi_Mochi_Kinako_Mochi', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/c5/Mochi_Mochi_Kinako_Mochi_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Juego de piernas</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Footwork_Draw', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/a/a7/Footwork_Draw_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Barreno de fuego</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Screwdriver', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b0/Screwdriver_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Estrella de roca</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Asterisk_Rock', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/2/29/Asterisk_Rock_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Pinzas cortantes</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Big_Scissors', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/cc/Big_Scissors_10.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Fortaleza nocturna</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Ichiyajou', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/80/Ichiyajou_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Estela ignea</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Jibashiri_Kaen', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/4a/Jibashiri_Kaen_OG_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Picadora</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Twin_Mixer', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/77/Twin_Mixer_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Coleccionista de cartas</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Card_Splash', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/78/Card_Splash_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>A todo vapor</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Dash_Train', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/45/Dash_Train_4.png">
+                        </div>
+                    </div>
+                </div>
+
+              <div class="ejemplo" data-posicion="parada">
+                    <h3>Mano celestial X</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/God_Hand_X', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/71/Zetsu_God_Hand_X_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Puerta del castillo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Castle_Gate', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/3f/%28GX%29_Castle_Gate_A.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Manos liberadas</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Burai_Hand', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/97/Burai_Hand_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Rompetiros</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Shoot_Break', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b4/Shoot_Break_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Cabezazo volcanico</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Volcano_Head', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/8a/Volcano_Head_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Corte de arena</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Sand_Cutter', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/bd/Sand_Cutter_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Rayo de puño</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Beam_Kobushi', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/30/Beam_Kobushi_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Golpe abrasador</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Dry_Blow', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/4c/Dry_Blow_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Rechace de fuego</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Dai_Bakuhatsu_Harite', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/9d/Dai_Bakuhatsu_Harite_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Malla letal</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Shootrap', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/11/Shoot_Wrap_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Escudo de fuerza</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Power_Shield', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/98/Power_Shield_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Rotacion inversa</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Counter_Drive_\(GK\)', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/91/Counter_Drive_%28GK%29_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Despeje de fuerza</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Power_Spike', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/cb/Power_Spike_V3_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Parada ardiente</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Burning_Catch', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/6/63/Burning_Catch_8.png">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+      <div class="centrar bosque">
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Supernova</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Supernova', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/a/a8/Supernova_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Triangulo letal final</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Last_Death_Zone', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/c2/Last_Death_Zone_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tormenta dimensional</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Dimension_Storm', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/f/f0/Dimension_Storm_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Amplificador magico</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Magic_Amp', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/39/Magic_Amp_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Impulso efimero</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Setsuna_Boost', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/e3/Setsuna_Boost_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Grito del Eden</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Scream_of_Eden', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/04/Scream_of_Eden_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>P. emperador Nº 3</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Koutei_Penguin_3gou', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/f/f2/Koutei_Penguin_3gou_G3_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Carga negativa</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Dark_Matter', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/41/Dark_Matter_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Giro atomico</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Gamma_Strike', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/85/Gamma_Strike_10.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Estrella oscura</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Extend_Zone', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/f/f5/Extend_Zone_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Ceniza negra</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Black_Ash', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/ee/Black_Ash_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Lluvia de azufre</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Joker_Rains', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/12/Joker_Rains_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Rayo de Ganimedes</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Ganymede_Proton', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/2/2c/Ganymede_Proton_2.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Bejuco gigante</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Gigant_Vine', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/39/Gigant_Vine_5.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>P. emperador Nº 2</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Koutei_Penguin_2gou', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/54/OG_Koutei_Penguin_2gou.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Golpe kabuki</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Kabuki_Break', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/51/Kabuki_Break.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Doble helice</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Spring_Arrow', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/91/Spring_Arrow_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tiro magnetico</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Gauss_Shot', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/54/%282013%29_Gauss_Shot.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tornado oscuro</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Dark_Tornado', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/0d/Shin_Dark_Tornado_10.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Lanza letal</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Death_Spear', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/a/a7/Death_Spear_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tiro espectral</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Maboroshi_Shot', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/9d/Maboroshi_Shot_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tiro elefante</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Ivory_Crash', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/2/25/Ivory_Crash_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Remate dragon</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Dragon_Crash', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/78/Dragon_Crash_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Lanza de Odin</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Gungnir', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/30/Gungnir_V2_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Astro remate</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Astro_Break', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/3f/Astro_Break_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Pentagrama</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Fortissimo', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/a/a4/Fortissimo_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Burbujas arcoiris</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Rainbow_Bubble_Shot', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/1b/Rainbow_Bubble_Shot_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Remate rebotado</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Bouncer_Rabbit', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/c4/Bouncer_Rabbit_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Trayectoria perfecta</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Perfect_Course', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/3a/Perfect_Course_2.png">
+                        </div>
+                    </div>
+                </div>
+
+               <div class="ejemplo" data-posicion="regate">
+                    <h3>Arco psiquico</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Psychic_Bow', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/48/Psychic_Bow_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Himno de Atenea</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Olympus_Harmony', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/7e/Olympus_Harmony_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>El ojo del huracan</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Storm_Zone', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/39/Storm_Zone_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Remolino de hojas</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Konoha_Rendezvous', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b3/Konoha_Rendezvous_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Salto champiñon</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Mushroom_Hop', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/0d/Mushroom_Hop_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Cruz del sur</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Southern_Crosscut', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/2/22/Southern_Crosscut_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>¡Mirad, un OVNI!</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Asoko_ni_UFO', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/35/Asoko_ni_UFO_2.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Truco balonazo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Trick_Ball', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/ed/Trick_Ball_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Trance melodico</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Melody_Wave', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/d/df/Melody_Wave.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Siega baja</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Death_Scythe_Low', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/ec/Death_Scythe_Low_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Regate en Z</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Z_Slash', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/53/Z_Slash_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Visto y no visto</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Presto_Turn', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/ed/Presto_Turn_V2_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Espejismo de balon</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Illusion_Ball', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/57/Shin_Illusion_Ball_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Choque directo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Linear_Drive', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/36/Linear_Drive_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Rematerializacion</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Transmove', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/7e/Transmove_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Mirada al futuro</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Future_Eye', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/50/Future_Eye_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Ilusion deslumbrante</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Kirakira_Illusion', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/06/Kirakira_Illusion_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Corte magico</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Dimension_Cut', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/ed/Dimension_Cut_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Jungla profunda</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Deep_Jungle', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/1b/Deep_Jungle_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Presa de zarcillo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Tentacle_Hold', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/c9/Tentacle_Hold_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Emboscada</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Sneaking_Raid', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/e5/Sneaking_Raid.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Bola de hojas</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Konoha_Roll', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/c1/Konoha_Roll_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Niebla mistica</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Deep_Mist', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/5b/Deep_Mist.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Olor embriagador</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Good_Smell', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/8c/Good_Smell_2.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Siega central</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Death_Scythe_Middle', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/32/Death_Scythe_Middle_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Red de caza</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Hunter%27s_Net', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/9d/Hunter%27s_Net_V2_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Telaraña</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Kumo_no_Ito', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/6/66/Kumo_no_Ito_Main.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Clave de sol</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Einsatz', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/80/Einsatz_10.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>La niebla</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/The_Mist', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/a/a9/The_Mist_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Bobina electrica</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Coil_Upper', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/09/Coil_Upper_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Barrido defensivo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Killer_Slide', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/16/Shin_Killer_Slide_2.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Mirada ladrona</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Thief_Eye', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/f/f5/Thief_Eye_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Ciclon oscuro</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Destiny_Cloud', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/18/Destiny_Cloud_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Cohete al espacio</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Ginga_Rocket', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/96/Ginga_Rocket_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Trampa vegetal</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Big_Mouth', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/d/d4/Big_Mouth_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Manos infinitas</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Mugen_The_Hand', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/81/Mugen_The_Hand_G5_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Despeje virtual</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Rebound_Layer', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/1e/Rebound_Layer_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Giroparada</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Gyro_Saving', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b2/Gyro_Saving_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Recepcion negativa</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Reverse_World', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/ea/Zetsu_Reverse_World_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Agujero de gusano</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Wormhole', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/a/a4/Wormhole_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Estrella reflectante</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Star_Reflection', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/a/ad/Star_Reflection_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Presa de sombras</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Kage_Tsukami', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/98/Kage_Tsukami_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Despeje retorcido</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Twist_Reach', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/a/ac/Twist_Reach_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Campo de fuerza</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Shoot_Pocket', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/6/6c/Shoot_Pocket.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Aplastamiento</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Doon_Shout', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/8c/Doon_Shout_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Ultrasonidos</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Bat_Attack', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/cc/Bat_Attack_4.png">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="centrar viento">
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Impulso equipo def.</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Saikyou_Eleven_Hadou', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/e3/Saikyou_Eleven_Hadou_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Remate orbital</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Orbital_Drive', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/09/Orbital_Drive_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tormenta, tornado, huracan</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Arashi_Tatsumaki_Hurricane', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/88/Arashi_Tatsumaki_Hurricane_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tormenta estelar</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Stargazer', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b2/Stargazer_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Fulgor majestuoso</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Glorious_Ray', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/d/d5/Glorious_Ray_1.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tormenta electrica</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Tenchi_Raimei', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/3f/Tenchi_Raimei_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Alba oscura</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Black_Dawn', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/5f/Black_Dawn_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>P. emperador nº 7</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Koutei_Penguin_7', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/6/63/Koutei_Penguin_7_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Rizo de dragon</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Dragon_Blaster', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/bc/Dragon_Blaster_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Ciclon blanco</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/White_Hurricane', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/47/White_Hurricane_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Sabiduria divina</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/God_Knows', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/9e/Shin_God_Knows_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Ruptura relampago</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Inazuma_Break', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/2/22/%28IE_%28018%29%29_The_first_Inazuma_Break.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Onda chispeante</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Sparkle_Wave', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/bb/Sparkle_Wave_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Balon iceberg</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Northern_Impact', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/1b/Northern_Impact_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tiro efervescente</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Bubble_Boil', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/72/Bubble_Boil_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Viento celestial</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/God_Wind', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/8c/God_Wind_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Taconazo parkour</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Parkour_Attack', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/10/Parkour_Attack_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Aullido de lobo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Wolf_Legend', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/5c/Wolf_Legend_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Leopardo ventisca</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Panther_Blizzard', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/01/Panther_Blizzard_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Gran tifon</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/The_Typhoon', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/f/f4/The_Typhoon_V3_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Ventisca eterna</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Eternal_Blizzard', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b1/Eternal_Blizzard_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Balon de plasma</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Plasma_Ball', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/f/f1/Plasma_Ball_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Choque sirena</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Mermaid_Smash', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/16/%28GX%29_Mermaid_Smash_%E2%88%9E.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Megalodon</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Megalodon', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b8/Megalodon_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Peces voladores</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Flying_Fish', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/5d/Flying_Fish_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tiro vendaval</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Mach_Wind', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/2/2c/Shin_Mach_Wind_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tiro rotativo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Spinning_Transam', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/72/Spinning_Transam_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tiro sonico</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Sonic_Shot', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/8a/Sonic_Shot_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Plumas brillantes</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Shiny_Feather', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/7d/Shiny_Feather_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Tunel tornado</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Kazaana_Drive', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/41/Kazaana_Drive_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Hora celestial</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Heaven%27s_Time', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/c1/Heaven%27s_Time_2.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Botefon latigo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Jackknife', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/cc/Jackknife_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Brisa encabritada</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Soyoyagi_Step', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/4c/Soyoyagi_Step_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Chorro de agua</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Liquid_Flow', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/a/a5/Liquid_Flow_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Circulo de hielo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/White_Blade', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/55/White_Blade_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Zigzag chispeante</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Zigzag_Spark', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/6/6e/Zigzag_Spark_V2_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Patin aereo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Air_Ride', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/c3/Air_Ride_V3_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Regate ritmico</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Ribbon_Shower', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b1/Ribbon_Shower.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Danza del viento</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Fuujin_no_Mai', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/3f/Fuujin_no_Mai.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Arrancada</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Zeroyon', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/40/Zeroyon_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Barrena voladora</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Spinning_Upper', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/88/Spinning_Upper_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Entrada huracan</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Shippuu_Dash', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/5b/Shippuu_Dash.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Aro-alehop</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Beautiful_Hoop', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/ec/Beautiful_Hoop_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Brisa deslizante</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Soyokaze_Step', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/9b/Soyokaze_Step_S_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Remolino acuatico</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Naminori_Pierrot', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/57/Naminori_Pierrot_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Pase sigilo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Stealth_Walk', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/f/f9/%28GX%29_Stealth_Walk_GO.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Caida prehistorica</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Kodai_no_Tsubasa', '_blank');">
+                            <img
+                                src="https://i.ibb.co/KwxJvSW/Kodai-no-Tsubasa-Strikers-PNG.webp">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Proyectil de ozono</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Air_Bullet', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/7f/Air_Bullet_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Gran catarata</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Waterfall', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/d/dd/Waterfall_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Gran torbellino</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Sargasso', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/a/a1/Sargasso_V2_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Logica ganadora</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Winning_Logic', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/78/Winning_Logic.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Golpe vacio</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Shinkuuma', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/08/Shinkuuma_V3_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Tormenta arena</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Desert_Storm', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/40/Desert_Storm_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Torre inexpugnable</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/The_Tower', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/e9/The_Tower_V2_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Corte giratorio</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Spinning_Cut', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/9d/%28IE%29_Spinning_Cut_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Paisaje helado</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Ice_Ground', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/8e/Ice_Ground_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Campo torbellino</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Senpuujin', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/39/Shin_Senpuujin_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Ataque de la ballena</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Killer_Whale', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/2/20/Killer_Whale.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Ecuacion defensiva</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Defense_Houteishiki', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/d/da/Defense_Houteishiki_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Fuerza centrifuga</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Spiral_Draw', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/72/Spiral_Draw_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Robo fantastico</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Wonder_Trap', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/5a/Wonder_Trap_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Agujero blanco</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Shining_Hole', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/e0/Shining_Hole_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Sacrificio</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Sacrifice', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/51/Sacrifice.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Puente sin final</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Kill_Bridge', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/2/23/Kill_Bridge_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Mate del dragon</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Gekirin_Dunk', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/5f/Gekirin_Dunk_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Dardo acuatico</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Aqua_Breath', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/6/64/Aqua_Breath_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Barrera de cristal</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Crystal_Barrier', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/f/f8/Crystal_Barrier_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Zarpazo poderoso</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Rising_Slash', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/cf/Rising_Slash_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Parada codo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Killer_Elbow', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/c1/Killer_Elbow_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Ancla de navio</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Hydro_Anchor', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/9e/Hydro_Anchor_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Colmillo de cocodrilo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Crocodile_Fang', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/e6/Crocodile_Fang.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Puños certeros</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Rapid_Whip', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/9d/Rapid_Whip_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Tormenta de petalos</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Hanafubuki', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/6/61/Hanafubuki_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Parada mate</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Wild_Dunk', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/04/Wild_Dunk_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Parada en pirueta</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Moonsault_Stamp', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b5/Moonsault_Stamp_7.png">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="centrar tierra">
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>La tierra infinito</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/The_Earth_∞', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/2/2b/The_Earth_%E2%88%9E_10.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Triple amenaza</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Evolution', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/e0/Evolution_11.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Corte Big Bang</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Big_Bang_Slash', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/f/ff/Big_Bang_Slash_1.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Soy todopoderoso</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Great_Max_na_Ore', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b5/Great_Max_na_Ore_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tiro supermasivo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Chaos_Meteor', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/4d/Chaos_Meteor_10.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Mordisco de vampiro</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Vampire_Lord', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/e5/Vampire_Lord_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Superreamte rebotado</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Extreme_Rabbit', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/2/25/Extreme_Rabbit_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Doble trallazo planetario</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Souhi_Yuuseidan', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/1f/Souhi_Yuuseidan_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Remate celestial</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Heaven_Drive', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/5b/Heaven_Drive_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Colmillo retorcido</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Ouja_no_Kiba', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/6/6e/Ouja_no_Kiba_Kai_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Golpe cataclismo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Disaster_Break', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/85/Disaster_Break_G2_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tiro balista</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Ballista_Shot', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/75/Ballista_Shot_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Baile de mariposas</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Butterfly_Dream', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/ea/Butterfly_Dream_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Espada de Odin</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Odin_Sword', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/f/f7/Shin_Odin_Sword_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Misil arenoso</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Dust_Javelin', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/72/Dust_Javelin_2.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Polen devastador</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Floral_Despair', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/91/Floral_Despair_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Salto incadescente</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Buttobi_Jump', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/33/Buttobi_Jump_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Cabezazo gigaton</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Gigaton_Head', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/0c/Gigaton_Head_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Remate del tigre</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Tiger_Drive', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b6/Tiger_Drive_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>La fiebre del oro</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Gold_Fever', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/c3/Gold_Fever_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Chut ancestral</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Denrai_Houtou', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/11/%28CS_%28041%29%29_Denrai_Houtou_Armed.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Remate dinosaurio</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Dinosaur_Break', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/d/d5/Dinosaur_Break_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Golpe de samba</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Strike_Samba', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/77/Strike_Samba_V3_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Coletazo de dragon</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Dragon%27s_Tail', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/e3/Dragon%27s_Tail_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Cabezazo catapulta</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Kyoubou_Head', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/8e/Kyoubou_Head_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Cascabel</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Sidewinder', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/83/Sidewinder_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Engranajes aceleradores</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Gear_Drive', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/7a/Gear_Drive_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Chut prehistorico</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Kodai_no_Kiba', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/87/Kodai_no_Kiba_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Espada de Atlas</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Atlas_Sword', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b1/Atlas_Sword_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Defensa holografica</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Hologram_Lock', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/97/Hologram_Rock_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Corriente negra</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Kuroshio_Ride', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/79/Kuroshio_Ride_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Espada real</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Ou_no_Tsurugi', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b1/Ou_no_Tsurugi_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Pasos aereos</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Sky_Walk', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/08/Sky_Walk_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Excavacion</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Dig_Through', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/7a/Dig_Through_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Dragon ascendente</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Nobori_Ryuu', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/46/Nobori_Ryuu_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Guardia acrobatica</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Acrobat_Keep', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/91/Acrobat_Keep_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Deriva desertica</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Desert_Drift', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/98/Desert_Drift_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Mina terrestre</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Claymore', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/11/Claymore_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Mirada furiosa</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Oraora_Menchi', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/d/da/%28GX%29_Kami_Oraora_Menchi.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Sello gigante</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/The_Stamp', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/59/The_Stamp_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Finta bumeran</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Boomerang_Feint', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/bd/Boomerang_Feint_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Patada canguro</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Kangaroo_Kick', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/a/a3/Kangaroo_Kick_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Confusion</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Gorimuchuu', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/2/28/Gorimuchuu_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Regate topo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Mogura_Feint', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/c6/Mogura_Feint_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Falange</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Phalanx', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/4c/Phalanx_5.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Maza rocosa</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Rock_Hammer', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/f/fa/Rock_Hammer_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Muro de hierro</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Iron_Wall', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/98/Iron_Wall_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Tuneladora</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Dig_Up', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/7/77/Dig_Up_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Fiesta floral</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Magical_Flower', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/1a/Magical_Flower_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Pirueta rascacielos</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Skytree_Fall', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/6/6a/Skytree_Fall_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Muralla de Atlantis</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Atlantis_Wall', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/f/fe/Atlantis_Wall_G2_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Magnetismo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Magnet_Draw', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/02/Magnet_Draw_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Remolino de polvo</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Willy_Willy', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/3a/Willy_Willy_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Muralla de las montañas</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Okehazama_Wall', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/c7/Okehazama_Wall_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Carga de elefantes</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Elephant_Press', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/8a/Elephant_Press_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Defensa propulsada</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Kattobi_Defense', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/d/d8/Kattobi_Defense_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Copia y corta</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Trace_Press', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/a/a3/Trace_Press_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>La gran muralla</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Viva!_Banri_no_Choujou', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/0b/Viva%21_Banri_no_Choujou_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Presa fractal</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Fractal_House', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/2/28/Fractal_House_V2_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>El muro</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/The_Wall', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/92/The_Wall_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Bimano celestial</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/God_Hand_W', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/8d/God_Hand_W_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Cometiros</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Shoot_Eater', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/90/Shoot_Eater_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Mano celestial V</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/God_Hand_V', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/cd/God_Hand_V_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Romance de los tres reinos</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Taikoku_Ouka', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b7/Shin_Taikoku_Ouka_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Puño de arena</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Sand_Knock', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/2/23/Sand_Knock_5.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Parada de capoeira</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Capoeira_Snatch', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/ea/Capoeira_Snatch_V3_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Barrera de Gaia</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Fence_of_Gaia', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/8b/Fence_of_Gaia_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Muralla gigante</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Gigant_Wall', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/3d/Gigant_Wall_8.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Parada en plancha</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Buttobi_Punch', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/d/d7/Buttobi_Punch_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Mordisco de serpiente</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Serpent_Fang', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/1/10/Serpent_Fang_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Ciclon humano</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Abare_Guruma', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/98/Abare_Guruma_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Mandril</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Dokonjou_Catch', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/41/Dokonjou_Catch.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Mano celestial</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/God_Hand', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/57/Shin_God_Hand_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Captura excelente</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Excellent_Breast', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/40/Excellent_Breast_Kai_5.png">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="centrar neutro">
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Caida galactica</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Galactica_Fall', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/e/e8/Galactica_Fall.jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Ataque omega</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Omega_Attack', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b4/Omega_Attack_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Zero magnum</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Zero_Magnum', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/05/Zero_Magnum_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Escena nocturna</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/The_Monsters', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/d/d2/The_Monsters_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Gran explosion</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Great_Blaster', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/44/Great_Blaster_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Cañonazo de fragmentos</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Shellbit_Burst', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/9c/Shellbit_Burst_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Disparo doble</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Double_Shot', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/be/Double_Shot_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Aguijones escarlata</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Thousand_Arrow', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/00/Thousand_Arrow_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="tiro">
+                    <h3>Tijera fulminante</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Bicycle_Sword', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/4/47/Bicycle_Sword_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Formateo de disco</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/All_Delete', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/82/All_Delete_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Regate supersonico</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Sprint_Warp', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/0e/Sprint_Warp_7.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Despliegue de señuelos</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Decoy_Release', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/c/c2/Decoy_Release_3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="regate">
+                    <h3>Estampida en linea</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Muei_Souha', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/8e/Muei_Souha_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Salto dimensional</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Vanishing_Cut', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/2/21/Vanishing_Cut_4.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Acrobacia robotica</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Muei_Ranbu', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/b/b4/Muei_Ranbu_2.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Campo minado</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Grand_Sweeper', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/8/82/Grand_Sweeper_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Espectro oscuro</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Saikyou-san_Shoukan', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/6/62/Saikyousan_Shoukan_8.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="defensa">
+                    <h3>Obstruccion electrica</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Blitz_Bridge', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/0/0e/Blitz_Bridge_9.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Mano de pinguinos</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Penguin_The_Hand', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/38/Penguin_The_Hand_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Repulsion</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Rejection', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/9/95/Rejection_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Centro de gravedad</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Gravity_Point', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/3/34/Gravity_Point_6.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ejemplo" data-posicion="parada">
+                    <h3>Despeje de medialuna</h3>
+                    <div class="jugadores">
+                        <div class="minicarta"
+                            onclick="window.open('https://inazuma-eleven.fandom.com/wiki/Kogetsu_Juujishou', '_blank');">
+                            <img
+                                src="https://static.wikia.nocookie.net/inazuma-eleven/images/5/5f/Kogetsu_Juujishou_5.png">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div id="button-up">
+                <i class="fa-solid fa-chevron-up"></i>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
