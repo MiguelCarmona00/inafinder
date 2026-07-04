@@ -1,0 +1,13 @@
+# Override de DESARROLLO (docker compose lo aplica automáticamente):
+# monta el código fuente encima de la imagen para ver los cambios al momento
+# y publica MariaDB en el host para inspeccionar la BD con un cliente.
+# En producción NO usar: docker compose -f docker-compose.yml up -d
+services:
+  app:
+    volumes:
+      - ../../inafinder:/var/www/html
+      - ../../inafinder/.env.docker:/var/www/html/.env:ro
+
+  db:
+    ports:
+      - "${DB_PORT:-3306}:3306"

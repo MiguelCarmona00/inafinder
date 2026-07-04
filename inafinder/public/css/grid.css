@@ -1,0 +1,11 @@
+/* Grid personalizado para resoluciones específicas */
+@media (min-width: 1920px) and (max-width: 2559px) {
+    .custom-grid-responsive {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
+}
+@media (min-width: 2560px) {
+    .custom-grid-responsive {
+        grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    }
+}

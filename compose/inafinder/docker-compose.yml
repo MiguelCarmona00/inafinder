@@ -1,0 +1,50 @@
+# Compose base (producción): la app corre desde la imagen construida, sin
+# montar el código fuente, y MariaDB no expone su puerto al host.
+#   Producción:  docker compose -f docker-compose.yml up -d --build
+#   Desarrollo:  docker compose up -d   (aplica docker-compose.override.yml
+#                automáticamente: bind-mount del código y puerto 3306)
+name: inafinder
+
+services:
+  app:
+    build:
+      context: ../../inafinder
+    container_name: inafinder_app
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-8080}:80"
+    volumes:
+      # Config de entorno del contenedor (solo credenciales locales de docker)
+      - ../../inafinder/.env.docker:/var/www/html/.env:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - inafinder_net
+
+  db:
+    image: mariadb:10.11
+    container_name: inafinder_db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root}
+      MYSQL_DATABASE: ${DB_NAME:-inafinder_prod}
+      MYSQL_USER: ${DB_USER:-inafinder}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-inafinder}
+    volumes:
+      - db_data:/var/lib/mysql
+      - ../../bds/inafinderprod.sql:/docker-entrypoint-initdb.d/01-inafinderprod.sql:ro
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+    networks:
+      - inafinder_net
+
+volumes:
+  db_data:
+
+networks:
+  inafinder_net:
+    driver: bridge

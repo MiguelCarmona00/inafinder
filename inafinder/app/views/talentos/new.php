@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Talentos</title>
+    <link href="/../css/output.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="imgs/src/logo.ico">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="bg-primary font-sans text-white min-h-screen pt-16">
+
+    <?php include '../app/views/partials/navbar.php'; ?>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+
+            <div class="flex justify-center mb-6">
+                <a href="/talentosList" class="bg-info px-6 py-3 bg-warning text-white rounded-lg hover:bg-yellow-600 transition-colors font-medium focus:ring-2 focus:ring-warning">
+                    📋 Ver Lista de Talentos
+                </a>
+            </div>
+
+            <h1 class="text-3xl font-bold mb-6 text-center">Añadir Talentos</h1>
+
+            <form action="/talentos" method="POST" id="mainForm">
+                <?php echo \App\Core\Csrf::field(); ?>
+                <div id="formsContainer">
+                    <!-- Primer formulario -->
+                    <div class="talento-form bg-darker rounded-lg p-6 mb-6 shadow-[0_2px_8px_rgba(0,0,0,0.3)] relative" data-form-index="0">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold">Talento #1</h3>
+                            <button type="button" class="removeForm text-error hover:text-red-400 text-2xl hidden" title="Eliminar formulario">
+                                ❌
+                            </button>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <!-- Nombre -->
+                            <div>
+                                <label class="block text-sm font-medium text-white mb-2">
+                                    Nombre del Talento <span class="text-error">*</span>
+                                </label>
+                                <input type="text" name="talentos[0][nombre]" required 
+                                       placeholder="Ej: Mejor Garantía, Sangre, sudor y llanto..."
+                                       class="w-full p-3 bg-gray text-white border border-light-gray rounded-lg focus:border-success focus:ring-1 focus:ring-success transition-colors placeholder-light-gray">
+                            </div>
+
+                            
+                            <!-- Tipo -->
+                            <div>
+                                <label class="block text-sm font-medium text-white mb-2">
+                                    Tipo de Talento <span class="text-error">*</span>
+                                </label>
+                                <select name="talentos[0][tipo]" required 
+                                        class="w-full p-3 bg-gray text-white border border-light-gray rounded-lg focus:border-success focus:ring-1 focus:ring-success transition-colors">
+                                    <option value="">Selecciona el tipo...</option>
+                                    <option value="Mejora de capacidades">Mejora de capacidades</option>
+                                    <option value="Mejora de espíritu guerrero">Mejora de espíritu guerrero</option>
+                                    <option value="Mejora de ventajas">Mejora de ventajas</option>
+                                    <option value="Mejora de supertécnicas">Mejora de supertécnicas</option>
+                                    <option value="Mejora de recompensa">Mejora de recompensa</option>
+                                    <option value="Mejora de campo">Mejora de campo</option>
+                                    <option value="Mejora de duelos">Mejora de duelos</option>
+                                </select>
+                            </div>
+
+                            <!-- Afecta -->
+                            <div>
+                                <label class="block text-sm font-medium text-white mb-2">
+                                    A quién afecta <span class="text-error">*</span>
+                                </label>
+                                <select name="talentos[0][afecta]" required 
+                                        class="w-full p-3 bg-gray text-white border border-light-gray rounded-lg focus:border-success focus:ring-1 focus:ring-success transition-colors">
+                                    <option value="">Selecciona a quién afecta...</option>
+                                    <option value="Usuario">Usuario</option>
+                                    <option value="Oponente">Oponente</option>
+                                    <option value="Companieros asistidos">Compañeros asistidos</option>
+                                    <option value="Todo el equipo">Todo el equipo</option>
+                                </select>
+                            </div>
+
+                            <!-- Descripción -->
+                            <div>
+                                <label class="block text-sm font-medium text-white mb-2">
+                                    Descripción (Opcional)
+                                </label>
+                                <textarea name="talentos[0][descripcion]" rows="4" 
+                                          placeholder="Describe las características del talento, su poder, elementos que utiliza, etc..."
+                                          class="w-full p-3 bg-gray text-white border border-light-gray rounded-lg focus:border-success focus:ring-1 focus:ring-success transition-colors placeholder-light-gray resize-vertical"></textarea>
+                                <p class="text-xs text-light-gray mt-1">Puedes escribir una descripción detallada del talento y sus efectos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botones principales -->
+                <div class="flex gap-4 pt-4 justify-center">
+                    <button type="submit" 
+                            class="px-8 py-3 bg-success text-white rounded-lg hover:bg-green-600 transition-colors font-medium focus:ring-2 focus:ring-success focus:ring-offset-2 focus:ring-offset-darker hover:cursor-pointer">
+                        ⚡ Añadir Todos los Talentos
+                    </button>
+                    <button type="button" id="addForm" class="px-6 py-3 bg-info text-white rounded-lg hover:bg-green-600 transition-colors font-medium focus:ring-2 focus:ring-success hover:cursor-pointer">
+                        ➕ Añadir Otro Talento
+                    </button>
+                    <span class="ml-4 text-light-gray self-center">
+                        Formularios: <span id="formCounter">1</span>/10
+                    </span>
+                    
+                </div>
+
+                           
+                <!-- Botón para añadir formularios -->
+                <div class="flex justify-center mt-3">
+                    <a href="/talentosList" 
+                       class="px-8 py-3 bg-gray text-white rounded-lg hover:bg-light-gray transition-colors font-medium text-center focus:ring-2 focus:ring-gray focus:ring-offset-2 focus:ring-offset-darker">
+                        Cancelar
+                    </a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Botón flotante para volver arriba -->
+    <button id="scrollToTop" class="fixed  bottom-6 right-6 m-2 z-50 p-3 bg-success text-white rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 opacity-0 invisible hover:scale-110 focus:ring-2 focus:ring-success">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script>
+    $(document).ready(function() {
+        let formCount = 1;
+        const maxForms = 10;
+
+        // Función para actualizar el contador
+        function updateCounter() {
+            $('#formCounter').text(formCount);
+            $('#addForm').prop('disabled', formCount >= maxForms);
+            
+            if (formCount >= maxForms) {
+                $('#addForm').addClass('bg-gray hover:bg-gray cursor-not-allowed').removeClass('bg-success hover:bg-green-600');
+            } else {
+                $('#addForm').addClass('bg-success hover:bg-green-600').removeClass('bg-gray hover:bg-gray cursor-not-allowed');
+            }
+        }
+
+        // Función para mostrar/ocultar botones de eliminar
+        function toggleRemoveButtons() {
+            if (formCount > 1) {
+                $('.removeForm').removeClass('hidden');
+            } else {
+                $('.removeForm').addClass('hidden');
+            }
+        }
+
+        // Función para actualizar índices de los formularios
+        function updateFormIndices() {
+            $('.talento-form').each(function(index) {
+                $(this).attr('data-form-index', index);
+                $(this).find('h3').text('Talento #' + (index + 1));
+                
+                // Actualizar nombres de los campos
+                $(this).find('input, textarea, select').each(function() {
+                    const name = $(this).attr('name');
+                    if (name && name.includes('talentos[')) {
+                        const newName = name.replace(/talentos\[\d+\]/, 'talentos[' + index + ']');
+                        $(this).attr('name', newName);
+                    }
+                });
+            });
+        }
+
+        // Añadir nuevo formulario
+        $('#addForm').click(function() {
+            if (formCount < maxForms) {
+                const newForm = $('.talento-form').first().clone();
+                
+                // Limpiar valores del formulario clonado
+                newForm.find('input[type="text"], textarea').val('');
+                newForm.find('select').prop('selectedIndex', 0);
+                
+                // Añadir al contenedor
+                $('#formsContainer').append(newForm);
+                
+                formCount++;
+                updateFormIndices();
+                updateCounter();
+                toggleRemoveButtons();
+                
+                // Scroll suave al nuevo formulario
+                $('html, body').animate({
+                    scrollTop: newForm.offset().top - 100
+                }, 500);
+            }
+        });
+
+        // Eliminar formulario
+        $(document).on('click', '.removeForm', function() {
+            if (formCount > 1) {
+                $(this).closest('.talento-form').fadeOut(300, function() {
+                    $(this).remove();
+                    formCount--;
+                    updateFormIndices();
+                    updateCounter();
+                    toggleRemoveButtons();
+                });
+            }
+        });
+
+        // Confirmación antes de enviar
+        $('#mainForm').submit(function(e) {
+            const message = formCount === 1 ? 
+                '¿Estás seguro de que quieres añadir este talento?' : 
+                `¿Estás seguro de que quieres añadir estos ${formCount} talentos?`;
+            
+            if (!confirm(message)) {
+                e.preventDefault();
+            }
+        });
+
+        // Botón para volver arriba
+        const scrollToTopBtn = $('#scrollToTop');
+
+        // Mostrar/ocultar botón según scroll
+        $(window).scroll(function() {
+            const scrollTop = $(window).scrollTop();
+            
+            if (scrollTop > 200) {
+                scrollToTopBtn.css({
+                    'opacity': '1',
+                    'visibility': 'visible'
+                });
+            } else {
+                scrollToTopBtn.css({
+                    'opacity': '0',
+                    'visibility': 'hidden'
+                });
+            }
+        });
+        
+        // Funcionalidad del botón volver arriba
+        scrollToTopBtn.click(function() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 600);
+        });
+
+        // Inicializar estado
+        updateCounter();
+        toggleRemoveButtons();
+    });
+    </script>
+
+</body>
+</html>
