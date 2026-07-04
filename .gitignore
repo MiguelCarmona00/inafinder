@@ -2,3 +2,6 @@
 # el historial de auditoría de seguridad): no publicar
 ANALISIS_INAFINDER.md
 .claude/
+
+# Variables locales del compose (hay un .env.example como plantilla)
+compose/inafinder/.env
