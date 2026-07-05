@@ -22,7 +22,7 @@ class ImageConverter
             return null;
         }
 
-        $info = getimagesize($archivo['tmp_name']);
+        $info = @getimagesize($archivo['tmp_name']);
         if ($info === false) {
             return null;
         }
@@ -41,7 +41,7 @@ class ImageConverter
         }
 
         // Obtener información de la imagen
-        $infoImagen = getimagesize($rutaOrigen);
+        $infoImagen = @getimagesize($rutaOrigen);
         if ($infoImagen === false) {
             return false;
         }

@@ -63,8 +63,8 @@
                             <select name="jugador[posicion]" 
                                     class="w-full p-3 bg-gray text-white border border-light-gray rounded-lg focus:border-success focus:ring-1 focus:ring-success transition-colors">
                                 <option value="">Selecciona una posición</option>
-                                <option value="portero" <?php echo ($data['jugador']['posicion'] === 'Portero') ? 'selected' : ''; ?>>Portero</option>
-                                <option value="defensa" <?php echo ($data['jugador']['posicion'] === 'Defensa') ? 'selected' : ''; ?>>Defensa</option>
+                                <option value="portero" <?php echo ($data['jugador']['posicion'] === 'portero') ? 'selected' : ''; ?>>Portero</option>
+                                <option value="defensa" <?php echo ($data['jugador']['posicion'] === 'defensa') ? 'selected' : ''; ?>>Defensa</option>
                                 <option value="centro" <?php echo ($data['jugador']['posicion'] === 'centro') ? 'selected' : ''; ?>>Centro</option>
                                 <option value="delantero" <?php echo ($data['jugador']['posicion'] === 'delantero') ? 'selected' : ''; ?>>Delantero</option>
                             </select>
@@ -135,10 +135,26 @@
                         <!-- Estadísticas -->
                         <div>
                             <label class="block text-sm font-medium text-white mb-2">Estadísticas</label>
-                            <textarea name="jugador[estadisticas]" rows="12" 
-                                    placeholder="GP: <?php echo (int) $data['jugador']['pe']; ?>&#10;TP: <?php echo (int) $data['jugador']['pt']; ?>&#10;Kick: <?php echo (int) $data['jugador']['tiro']; ?>&#10;Dribbling: <?php echo (int) $data['jugador']['regate']; ?>&#10;Block: <?php echo (int) $data['jugador']['defensa']; ?>&#10;Catch: <?php echo (int) $data['jugador']['control']; ?>&#10;Technique: <?php echo (int) $data['jugador']['tecnica']; ?>&#10;Speed: <?php echo (int) $data['jugador']['rapidez']; ?>&#10;Stamina: <?php echo (int) $data['jugador']['aguante']; ?>&#10;Lucky: <?php echo (int) $data['jugador']['suerte']; ?>&#10;Freedom: <?php echo (int) $data['jugador']['libertad']; ?>"
-                                    class="w-full p-3 bg-gray text-white border border-light-gray rounded-lg focus:border-success focus:ring-1 focus:ring-success transition-colors placeholder-light-gray resize-vertical"></textarea>
-                            <p class="text-xs text-light-gray mt-1">Formato: NombreStat: Valor. Una por línea. Deja vacío para mantener estadísticas actuales.</p>
+                            <textarea name="jugador[estadisticas]" rows="12"
+                                    class="w-full p-3 bg-gray text-white border border-light-gray rounded-lg focus:border-success focus:ring-1 focus:ring-success transition-colors placeholder-light-gray resize-vertical"><?php
+                                $stats = [
+                                    'GP' => $data['jugador']['pe'],
+                                    'TP' => $data['jugador']['pt'],
+                                    'Kick' => $data['jugador']['tiro'],
+                                    'Dribbling' => $data['jugador']['regate'],
+                                    'Block' => $data['jugador']['defensa'],
+                                    'Catch' => $data['jugador']['control'],
+                                    'Technique' => $data['jugador']['tecnica'],
+                                    'Speed' => $data['jugador']['rapidez'],
+                                    'Stamina' => $data['jugador']['aguante'],
+                                    'Lucky' => $data['jugador']['suerte'],
+                                    'Freedom' => $data['jugador']['libertad'],
+                                ];
+                                foreach ($stats as $etiqueta => $valor) {
+                                    echo $etiqueta . ': ' . (int) $valor . "\n";
+                                }
+                            ?></textarea>
+                            <p class="text-xs text-light-gray mt-1">Formato: NombreStat: Valor. Una por línea. Cambia solo lo que quieras actualizar.</p>
                         </div>
 
                         <!-- Técnicas actuales -->
