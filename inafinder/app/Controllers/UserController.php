@@ -181,6 +181,10 @@ class UserController extends BaseController
             // Procesar el formulario
             $nombreEquipo = $_POST['nombre'] ?? '';
             $escudoEquipo = $_FILES['escudo'] ?? null;
+            // Hubo intento de subida si PHP recibió el campo con algo distinto de
+            // "no file" (incluye el caso en que PHP la rechaza por upload_max_filesize,
+            // donde tmp_name llega vacío pero error no es UPLOAD_ERR_NO_FILE)
+            $intentoSubidaEscudo = $escudoEquipo && ($escudoEquipo['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_NO_FILE;
 
             // Validar el nombre, solo puede enviar caracteres alfanuméricos y espacios, contando tildes
             if (!preg_match('/^[\p{L}0-9 ]+$/u', $nombreEquipo)) {
@@ -189,8 +193,7 @@ class UserController extends BaseController
             }
 
             // Validar la imagen por su contenido real (el type que manda el navegador es falsificable)
-            if ($escudoEquipo && !empty($escudoEquipo['tmp_name'])
-                && ImageConverter::validarEscudo($escudoEquipo) === null) {
+            if ($intentoSubidaEscudo && ImageConverter::validarEscudo($escudoEquipo) === null) {
                 $data['error'] = "El escudo debe ser una imagen PNG o WebP de menos de 2 MB.";
                 $procesaForm = false;
             }
@@ -202,7 +205,7 @@ class UserController extends BaseController
                 $monedero = Monederos::getInstancia();
 
                 // Procesamos la imagen: se valida el contenido y se guarda como WebP
-                if ($escudoEquipo && !empty($escudoEquipo['tmp_name'])) {
+                if ($intentoSubidaEscudo) {
                     $fileName = $this->guardarEscudo($escudoEquipo, $nombreEquipo, $errorEscudo);
                     if ($fileName !== null) {
                         $equipos->setEscudo($fileName);
@@ -277,6 +280,10 @@ class UserController extends BaseController
             // Obtener datos del formulario
             $nombreEquipo = $_POST['nombre'] ?? '';
             $escudoEquipo = $_FILES['escudo'] ?? null;
+            // Hubo intento de subida si PHP recibió el campo con algo distinto de
+            // "no file" (incluye el caso en que PHP la rechaza por upload_max_filesize,
+            // donde tmp_name llega vacío pero error no es UPLOAD_ERR_NO_FILE)
+            $intentoSubidaEscudo = $escudoEquipo && ($escudoEquipo['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_NO_FILE;
 
             // Validar el nombre del equipo
             if (empty($nombreEquipo)) {
@@ -288,11 +295,9 @@ class UserController extends BaseController
             }
 
             // Validar imagen si se proporcionó (por contenido real, no por el type del navegador)
-            if ($escudoEquipo && !empty($escudoEquipo['tmp_name'])) {
-                if (ImageConverter::validarEscudo($escudoEquipo) === null) {
-                    $data['error'] = "El escudo debe ser una imagen PNG o WebP de menos de 2 MB.";
-                    $procesaForm = false;
-                }
+            if ($intentoSubidaEscudo && ImageConverter::validarEscudo($escudoEquipo) === null) {
+                $data['error'] = "El escudo debe ser una imagen PNG o WebP de menos de 2 MB.";
+                $procesaForm = false;
             }
 
             if ($procesaForm) {

@@ -4,6 +4,15 @@ RewriteEngine On
 RewriteCond %{REQUEST_URI} ^/(imgs|styles|src|css|script|imagenes|uploads) [NC]
 RewriteRule .* - [L]
 
+# El JS de la app (public/js/*.js) cambia con cada deploy y no lleva nombre
+# versionado: sin esto el navegador puede quedarse con una copia vieja en
+# caché (sin revalidar) durante días, incluso tras cerrar/abrir sesión.
+<IfModule mod_headers.c>
+    <FilesMatch "\.js$">
+        Header set Cache-Control "no-cache"
+    </FilesMatch>
+</IfModule>
+
 # Redirige todo lo dem�s a index.php
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
