@@ -1,28 +1,57 @@
 // Filtros del mercado de jugadores
 let filtrosActivos = false;
 let timeoutBusqueda = null;
+let filtrosPanelVisible = false;
 
 $(document).ready(function() {
     initFiltros();
 });
 
 function initFiltros() {
-    // Toggle para filtros básicos
-    $('#toggleBasicFilters').click(function() {
-        const container = $('#basicFiltersContainer');
-        const icon = $('#basicFiltersIcon');
-        
-        container.slideToggle(300);
-        icon.toggleClass('rotate-90');
+    // Toggle del panel de filtros (mismo patrón que el monedero: panel fijo
+    // deslizante, esta vez desde la derecha)
+    $('#toggleFiltersBtn').click(function() {
+        const panel = $('#filtersPanel');
+        const button = $(this);
+        const icon = $('#filtersToggleIcon path');
+
+        if (!filtrosPanelVisible) {
+            panel.css('right', '0px');
+            button.addClass('bg-success').removeClass('bg-darker');
+            icon.attr('d', 'M6 18L18 6M6 6l12 12');
+            filtrosPanelVisible = true;
+        } else {
+            // -30rem = -480px: más que el ancho del panel (w-96 = 384px) a
+            // propósito, para que el shadow-2xl no se vea sangrando en el
+            // borde derecho de la pantalla cuando está "cerrado"
+            panel.css('right', '-480px');
+            button.addClass('bg-darker').removeClass('bg-success');
+            icon.attr('d', 'M4 6h16M4 12h16M4 18h16');
+            filtrosPanelVisible = false;
+        }
     });
 
-    // Toggle para filtros avanzados
-    $('#toggleAdvancedFilters').click(function() {
-        const container = $('#advancedFiltersContainer');
-        const icon = $('#advancedFiltersIcon');
-        
-        container.slideToggle(300);
-        icon.toggleClass('rotate-90');
+    // Botón de cerrar dentro del panel (solo visible en móvil, ver md:hidden
+    // en la vista): tocar fuera del panel para cerrarlo es incómodo cuando
+    // ocupa casi toda la pantalla
+    $('#closeFiltersBtn').click(function() {
+        $('#toggleFiltersBtn').click();
+    });
+
+    // Cerrar el panel si se hace clic fuera de él
+    $(document).click(function(event) {
+        if (filtrosPanelVisible &&
+            !$(event.target).closest('#filtersPanel').length &&
+            !$(event.target).closest('#toggleFiltersBtn').length) {
+            $('#toggleFiltersBtn').click();
+        }
+    });
+
+    // Cerrar en pantallas muy pequeñas al redimensionar
+    $(window).resize(function() {
+        if ($(window).width() < 480 && filtrosPanelVisible) {
+            $('#toggleFiltersBtn').click();
+        }
     });
 
     // Búsqueda en tiempo real para el nombre
@@ -34,7 +63,7 @@ function initFiltros() {
     });
 
     // Aplicar filtros automáticamente en cambios de select
-    $('#filtroPosicion, #filtroElemento, #filtroEdad, #filtroGenero, #filtroPrecioTipo').change(function() {
+    $('#filtroPosicion, #filtroElemento, #filtroEdad, #filtroGenero, #filtroPrecioTipo, #filtroOrden').change(function() {
         aplicarFiltrosAuto();
     });
 
@@ -59,11 +88,6 @@ function initFiltros() {
         aplicarFiltrosAuto();
     });
 
-    // Botón aplicar filtros
-    $('#aplicarFiltros').click(function() {
-        aplicarFiltros();
-    });
-
     // Botón limpiar filtros
     $('#limpiarFiltros').click(function() {
         limpiarFiltros();
@@ -81,6 +105,11 @@ function aplicarFiltrosAuto() {
 }
 
 function hayFiltrosActivos() {
+    // Un orden distinto del predeterminado también cuenta como filtro activo:
+    // fuerza la ruta de getJugadoresConFiltros(), que no tiene el LIMIT 10 sin
+    // ordenar de getNoFichados() usado en la carga sin filtros.
+    if ($('#filtroOrden').val() !== 'id_asc') return true;
+
     // Verificar filtros básicos
     if ($('#filtroNombre').val() !== '') return true;
     if ($('#filtroPosicion').val() !== '') return true;
@@ -158,7 +187,43 @@ function recopilarFiltros() {
         filtros.solo_disponibles = 'true';
     }
 
+    // Orden (valor combinado "campo_direccion", p.ej. "precio_desc")
+    const orden = $('#filtroOrden').val();
+    if (orden && orden !== 'id_asc') {
+        const separador = orden.lastIndexOf('_');
+        filtros.orden = orden.substring(0, separador);
+        filtros.direccion = orden.substring(separador + 1);
+    }
+
     return filtros;
+}
+
+// El servidor manda fichados y no fichados en dos listas separadas. Para el
+// orden "estándar" (predeterminado, por ID) hace falta mezclarlas e
+// intercalarlas por id_jugador: si solo se concatenan (no fichados primero,
+// fichados después) los fichados quedan agrupados al final en vez de en su
+// posición natural. Usado por mercado.js (carga inicial/polling) y por
+// cargarTodosLosJugadores() (Limpiar filtros) para que ambos coincidan.
+function combinarJugadoresPorId(data) {
+    const combinados = [];
+
+    if (data.jugadoresNoFichados) {
+        data.jugadoresNoFichados.forEach(function(jugador) {
+            combinados.push({ ...jugador, esFichado: false });
+        });
+    }
+
+    if (data.jugadoresFichados) {
+        data.jugadoresFichados.forEach(function(jugador) {
+            combinados.push({ ...jugador, esFichado: true });
+        });
+    }
+
+    combinados.sort(function(a, b) {
+        return a.id_jugador - b.id_jugador;
+    });
+
+    return combinados;
 }
 
 function actualizarResultados(data) {
@@ -222,8 +287,12 @@ function limpiarFiltros() {
         $('#' + stat + 'Max').val('');
     });
 
-    // Resetear checkbox
-    $('#soloDisponibles').prop('checked', true);
+    // Resetear checkbox (sin marcar, para que se vea la lista completa:
+    // disponibles + fichados)
+    $('#soloDisponibles').prop('checked', false);
+
+    // Resetear orden
+    $('#filtroOrden').val('id_asc');
 
     // Cargar todos los jugadores
     filtrosActivos = false;
@@ -235,10 +304,38 @@ function limpiarFiltros() {
 }
 
 function cargarTodosLosJugadores() {
-    // Usar la función original del mercado.js
-    if (typeof loadJugadores === 'function') {
-        loadJugadores();
-    }
+    // No reutilizar loadJugadores()/updateJugadores() de mercado.js: ese parche
+    // incremental está pensado para el polling (solo actualiza tarjetas ya
+    // presentes en el DOM) y no vacía el contenedor, así que si veníamos de un
+    // filtrado (el DOM solo tiene ese subconjunto) nunca se reconstruye la
+    // vista completa. Tampoco reutilizamos actualizarResultados() tal cual:
+    // esta vista es el orden "estándar" (por ID, fichados intercalados), no un
+    // resultado de filtro/orden explícito.
+    mostrarCargando();
+
+    $.ajax({
+        url: '/checkUpdates',
+        method: 'GET',
+        dataType: 'json',
+        success: function(response) {
+            $('#jugadoresNoFichados').empty();
+
+            const combinados = combinarJugadoresPorId(response);
+            let html = '';
+            combinados.forEach(function(jugador) {
+                html += createJugadorCard(jugador, jugador.esFichado);
+            });
+            $('#jugadoresNoFichados').html(html);
+
+            // Vista sin filtros: no mostrar el cuadro de "resultados" (no hay
+            // ningún filtro que "explicar")
+            $('#resultadosInfo').addClass('hidden');
+            $('#noResultados').addClass('hidden');
+        },
+        complete: function() {
+            ocultarCargando();
+        }
+    });
 }
 
 function mostrarCargando() {

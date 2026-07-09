@@ -164,11 +164,11 @@ class DefaultController extends BaseController
         $jugadores = Jugadores::getInstancia();
         
         // Si hay parámetros de filtros, usar la función de filtros
-        if (!empty($_GET) && (isset($_GET['nombre']) || isset($_GET['posicion']) || isset($_GET['elemento']) || 
-            isset($_GET['edad']) || isset($_GET['genero']) || isset($_GET['precio_tipo']) || 
+        if (!empty($_GET) && (isset($_GET['nombre']) || isset($_GET['posicion']) || isset($_GET['elemento']) ||
+            isset($_GET['edad']) || isset($_GET['genero']) || isset($_GET['precio_tipo']) ||
             isset($_GET['precio_min']) || isset($_GET['precio_max']) || isset($_GET['solo_disponibles']) ||
-            isset($_GET['pe_min']) || isset($_GET['pt_min']) || isset($_GET['tiro_min']) || 
-            isset($_GET['regate_min']) || isset($_GET['defensa_min']))) {
+            isset($_GET['pe_min']) || isset($_GET['pt_min']) || isset($_GET['tiro_min']) ||
+            isset($_GET['regate_min']) || isset($_GET['defensa_min']) || isset($_GET['orden']))) {
             
             // Procesar filtros
             $filtros = [];
@@ -191,6 +191,10 @@ class DefaultController extends BaseController
             }
             
             if (!empty($_GET['solo_disponibles'])) $filtros['solo_disponibles'] = $_GET['solo_disponibles'];
+
+            // Orden opcional (whitelist real de columnas en Jugadores::getJugadoresConFiltros)
+            if (!empty($_GET['orden'])) $filtros['orden'] = $_GET['orden'];
+            if (!empty($_GET['direccion'])) $filtros['direccion'] = $_GET['direccion'];
 
             // Paginación opcional (?limite=N&offset=M); sin ella se mantiene el
             // comportamiento de siempre (todos los resultados del filtro)

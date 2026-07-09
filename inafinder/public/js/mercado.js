@@ -74,34 +74,23 @@ function loadJugadores() {
 }
 
 function updateJugadores(data) {
-    // Crear un mapa de todos los jugadores (fichados y no fichados)
-    const todosLosJugadores = {};
-    
-    // Marcar jugadores no fichados
-    if (data.jugadoresNoFichados) {
-        data.jugadoresNoFichados.forEach(function(jugador) {
-            todosLosJugadores[jugador.id_jugador] = {
-                ...jugador,
-                esFichado: false
-            };
-        });
-    }
-    
-    // Marcar jugadores fichados
-    if (data.jugadoresFichados) {
-        data.jugadoresFichados.forEach(function(jugador) {
-            todosLosJugadores[jugador.id_jugador] = {
-                ...jugador,
-                esFichado: true
-            };
-        });
-    }
-    
+    // Orden "estándar" (por ID, con fichados intercalados en su posición
+    // natural en vez de agrupados al final) vía combinarJugadoresPorId()
+    // (definida en filtros.js). Esta función solo se llama para la vista sin
+    // filtros (carga inicial y polling), así que ese orden siempre aplica.
+    // Se guarda en un Map (no un objeto plano) porque un objeto reordena
+    // solo las claves que parecen enteros en orden ascendente al iterarlo,
+    // lo que rompería el orden que acabamos de fijar a propósito.
+    const todosLosJugadores = new Map();
+    combinarJugadoresPorId(data).forEach(function(jugador) {
+        todosLosJugadores.set(jugador.id_jugador, jugador);
+    });
+
     // Actualizar cards existentes
     $('.jugador-card').each(function() {
         const cardId = $(this).data('id');
-        const jugadorData = todosLosJugadores[cardId];
-        
+        const jugadorData = todosLosJugadores.get(cardId);
+
         if (jugadorData) {
             // Actualizar solo el botón si el estado cambió
             const currentButton = $(this).find('button, .w-full.py-3.px-4').last();
@@ -139,13 +128,13 @@ function updateJugadores(data) {
             }
             
             // Remover del mapa (ya procesado)
-            delete todosLosJugadores[cardId];
+            todosLosJugadores.delete(cardId);
         }
     });
-    
+
     // Añadir nuevos jugadores que no existían antes
     let nuevosJugadores = '';
-    Object.values(todosLosJugadores).forEach(function(jugador) {
+    todosLosJugadores.forEach(function(jugador) {
         nuevosJugadores += createJugadorCard(jugador, jugador.esFichado);
     });
     
