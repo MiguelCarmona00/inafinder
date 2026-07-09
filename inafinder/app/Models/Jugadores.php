@@ -44,9 +44,9 @@ class Jugadores extends DBAbstractModel
     // Para obtener jugadores que no están fichados (no aparecen en fichajes)
     public function getNoFichados()
     {
-        $this->query = "SELECT j.* FROM jugadores j 
-                       LEFT JOIN fichajes v ON j.id_jugador = v.id_jugador 
-                       WHERE v.id_jugador IS NULL LIMIT 10";
+        $this->query = "SELECT j.* FROM jugadores j
+                       LEFT JOIN fichajes v ON j.id_jugador = v.id_jugador
+                       WHERE v.id_jugador IS NULL ORDER BY j.id_jugador ASC";
         $this->get_results_from_query();
         return $this->rows;
     }
@@ -55,7 +55,8 @@ class Jugadores extends DBAbstractModel
     public function getFichados()
     {
         $this->query = "SELECT j.* FROM jugadores j
-                          INNER JOIN fichajes v ON j.id_jugador = v.id_jugador";
+                          INNER JOIN fichajes v ON j.id_jugador = v.id_jugador
+                          ORDER BY j.id_jugador ASC";
         $this->get_results_from_query();
         return $this->rows;
     }
@@ -365,6 +366,28 @@ class Jugadores extends DBAbstractModel
             $whereClause = 'WHERE ' . implode(' AND ', $where);
         }
 
+        // Orden opcional (claves 'orden' y 'direccion' en $filtros). Whitelist
+        // de columnas para no interpolar nombres de columna ni dirección sin
+        // validar en el SQL.
+        $columnasOrden = [
+            'id' => 'j.id_jugador',
+            'nombre' => 'j.nombre',
+            'precio' => 'j.precio_cantidad',
+            'pe' => 'j.pe',
+            'pt' => 'j.pt',
+            'tiro' => 'j.tiro',
+            'regate' => 'j.regate',
+            'defensa' => 'j.defensa',
+            'control' => 'j.control',
+            'tecnica' => 'j.tecnica',
+            'rapidez' => 'j.rapidez',
+            'aguante' => 'j.aguante',
+            'suerte' => 'j.suerte',
+            'libertad' => 'j.libertad',
+        ];
+        $columnaOrden = $columnasOrden[$filtros['orden'] ?? 'id'] ?? 'j.id_jugador';
+        $direccionOrden = strtoupper($filtros['direccion'] ?? 'ASC') === 'DESC' ? 'DESC' : 'ASC';
+
         // Paginación opcional (claves 'limite' y 'offset' en $filtros)
         $limitClause = '';
         if (!empty($filtros['limite']) && (int) $filtros['limite'] > 0) {
@@ -379,7 +402,7 @@ class Jugadores extends DBAbstractModel
             FROM jugadores j
             LEFT JOIN fichajes v ON j.id_jugador = v.id_jugador
             {$whereClause}
-            ORDER BY j.nombre ASC
+            ORDER BY {$columnaOrden} {$direccionOrden}
         " . $limitClause;
 
         $this->parametros = $params;
